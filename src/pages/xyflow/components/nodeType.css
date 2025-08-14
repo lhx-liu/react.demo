@@ -1,0 +1,12 @@
+.node-box {
+  width: 200px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+}
+
+.input-class {
+  width: 80px;
+  height: 30px;
+}
