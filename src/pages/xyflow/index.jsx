@@ -5,19 +5,23 @@
  * @Last Modified by: liuhaixu
  * @Last Modified time: 2025-08-08 15:37:16
  */
-import React, {
-  use,
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react';
-import { ReactFlow, useNodesState, useEdgesState } from '@xyflow/react';
+import React, { useCallback, useEffect, useMemo, useRef } from 'react';
+import {
+  ReactFlow,
+  useNodesState,
+  useEdgesState,
+  MarkerType,
+} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import StartNode from './components/StartNode';
 import EndNode from './components/EndNode';
 import BtnNode from './components/BtnNode';
+const markerEnd = {
+  type: MarkerType.Arrow,
+  color: '#000',
+  width: 20,
+  height: 20,
+};
 const initialNodes = [
   {
     id: '1',
@@ -49,11 +53,13 @@ const initialEdges = [
     id: '1',
     source: '1',
     target: '2',
+    markerEnd: markerEnd,
   },
   {
     id: '2',
     source: '2',
     target: '3',
+    markerEnd: markerEnd,
   },
 ];
 function XyFlow() {
