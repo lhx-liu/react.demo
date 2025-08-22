@@ -1,0 +1,39 @@
+.emoji-popover {
+  position: relative;
+  .emoji_wrapper {
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 288px;
+    padding: 3px;
+    background-color: white;
+    border: solid 1px #aaaaaa;
+    border-radius: 5px;
+  }
+  .emoji_item {
+    box-sizing: border-box;
+    padding: 0px 7px 0px 3px;
+  }
+  .emoji_item:hover {
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .tool_icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+  .emoji {
+    background-image: url('../image/emoji_black.png');
+  }
+  .emoji:hover {
+    background-image: url('../image/emoji_light.png');
+    cursor: pointer;
+  }
+}

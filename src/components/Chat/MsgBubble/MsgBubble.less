@@ -1,0 +1,136 @@
+.msgBubbleErr {
+    position: absolute;
+    top: 10px;
+    left: -24px;
+    width: 24px;
+    height: 24px;
+}
+
+.msgBubbleLoading {
+    position: absolute;
+    top: 10px;
+    left: -24px;
+    width: 18px;
+    height: 18px;
+    animation: turn 1s linear infinite;
+    -webkit-animation: turn 1s linear infinite; /* Safari 与 Chrome */
+}
+
+@keyframes turn
+{
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(72deg);
+    }
+
+    40% {
+        transform: rotate(144deg);
+    }
+
+    60% {
+        transform: rotate(216deg);
+    }
+
+    80% {
+        transform: rotate(288deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+ 
+@-webkit-keyframes turn /* Safari 与 Chrome */
+{
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(72deg);
+    }
+
+    40% {
+        transform: rotate(144deg);
+    }
+
+    60% {
+        transform: rotate(216deg);
+    }
+
+    80% {
+        transform: rotate(288deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.text_content {
+    max-width: 60%;
+    padding: 8px;
+    color: #333;
+    font-size: 13px;
+    letter-spacing: 2px;
+    word-wrap: break-word;
+    word-break: break-all;
+    background-color: #91ed61;
+    // background: #FFFFFF;
+    border-radius: 3px;
+
+    img {
+        cursor: pointer;
+    }
+    .img_content {
+        display: block;
+        width: auto;
+        max-width: 400px;
+        height: 150px;
+    }
+}
+
+.text_content_nobackground {
+    position: relative;
+    max-width: 60%;
+    padding: 8px;
+    color: #333;
+    font-size: 13px;
+    letter-spacing: 2px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 3px;
+
+    img {
+        cursor: pointer;
+    }
+    .img_content {
+        display: block;
+        width: auto;
+        max-width: 400px;
+        height: 150px;
+    }
+}
+
+.arrow {
+    position: relative;
+}
+.arrow::after {
+    position: absolute;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: #91ed61;
+    transform: rotate(45deg);
+    // background: #FFFFFF;
+    content: '';
+}
+.arrow_left::after {
+    left: -4px;
+}
+.arrow_right::after {
+    right: -4px;
+}
