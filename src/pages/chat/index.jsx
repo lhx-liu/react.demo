@@ -5,13 +5,7 @@
  * @Last Modified by: liuhaixu
  * @Last Modified time: 2025-08-21 21:28:35
  */
-import React, {
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react';
+import React, { useState } from 'react';
 import Chat from '../../components/Chat/index';
 
 const _initChatList = [
@@ -68,7 +62,7 @@ function Index() {
   return (
     <div className="chat" style={{ width: '100vw', height: '100vh' }}>
       <Chat
-        ChatHeader={<div>聊天头部</div>}
+        ChatHeader={<div>这是传入的自定义聊天头部</div>}
         contact={contact} //当前聊天对象
         me={my} //本人对象
         commonWords={['你好', '吃了吗？']} //快捷发送短语List
